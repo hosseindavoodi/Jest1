@@ -1,6 +1,6 @@
 
 
-import {App, App1, App2, App3} from './App';
+import {App, App1, App2, App3, App4} from './App';
 
 
 describe('function app', ()=>{
@@ -43,6 +43,21 @@ expect(res).toContain("hasan")
       test('it should find a property', ()=>{
         expect(res).toHaveProperty('id')
       })
+
+  })
+
+
+  describe('function App4', ()=>{
+    test('f', ()=>{
+      expect(()=>{App4('434521')}).toThrow();
+    })
+    test('ff', ()=>{
+      const res = App4('4321');
+      expect(res).toHaveProperty('jwt')
+    })
+    
+
+
 
   })
   

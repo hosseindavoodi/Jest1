@@ -21,4 +21,10 @@ export function App3()  {
   return {id: 1, name: 'Ben'}
 }
 
+export function App4(pass)  {
+  if (pass !== '4321')
+  throw new Error ('error')
+  return {jwt: 'fa$dfa@#fasdf'}
+}
+
 
