@@ -1,6 +1,6 @@
 
 
-import {App, App1, App2} from './App';
+import {App, App1, App2, App3} from './App';
 
 
 describe('function app', ()=>{
@@ -17,20 +17,23 @@ it('A should be equal B', ()=>{
 
 
 
-describe('function app1', ()=>{
 test('result should contain the name', ()=>{
 const res = App1("hasan");
 expect(res).toContain("hasan")
 })
 
-})
 
 
-describe('function app2', ()=>{
   test('result list should contain the name', ()=>{
-  const res = App2("Ben");
+  const res = App2();
   expect(res).toContain("Ben")
   })
-  
-  })
+ 
 
+
+  
+  test('result list should contain the object', ()=>{
+  const res = App3();
+  expect(res).toEqual({ id: 1, name: 'Ben' })
+  })
+  

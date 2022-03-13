@@ -12,7 +12,13 @@ export function App1(name)  {
 
 
 
-export function App2(name)  {
+export function App2()  {
   return ['Bonyamin', 'Ali', 'Ben']
 }
+
+
+export function App3()  {
+  return {id: 1, name: 'Ben'}
+}
+
 
