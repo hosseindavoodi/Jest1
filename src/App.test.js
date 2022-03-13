@@ -32,15 +32,18 @@ expect(res).toContain("hasan")
 
 
   describe('function App3', ()=>{
+    const res = App3();
+
     test('result list should contain the object', ()=>{
-      const res = App3();
       expect(res).toEqual({ id: 1, name: 'Ben' })
       })
       test('it should find the special object', ()=>{
-        const res = App3();
         expect(res).toMatchObject({id: 1})
-
       })
+      test('it should find a property', ()=>{
+        expect(res).toHaveProperty('id')
+      })
+
   })
   
   
